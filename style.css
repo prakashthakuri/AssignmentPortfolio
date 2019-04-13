@@ -1,0 +1,251 @@
+
+
+@font-face {
+    font-family: myfont;
+    src: url("Lora-Regular.woff");
+}
+@font-face {
+    font-family: myfont;
+    src: url("Lora-Bold.woff");
+    font-weight: bold;
+
+}
+
+* {box-sizing: border-box;}
+
+
+.main{
+    font-family: myfont;
+    display: grid;
+    grid:   'header header header header header header '
+            'introduction introduction introduction image image image'
+            'projects projects projects projects projects projects'
+            'socialmedia socialmedia getintouch getintouch getintouch getintouch'
+            'contactme contactme contactme contactme contactme contactme '
+'footer footer footer footer footer footer';
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    padding: 20px;
+    word-wrap: break-word;
+    background-image: url("mainimage.png");
+
+
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .main{
+        grid-template-columns: none;
+        grid-template-areas: 'header'
+    'introduction'
+    'image'
+    'projects'
+    'projects'
+    'socialmedia'
+    'getintouch'
+    'contactme'
+    'footer';
+        max-width: 100%;
+    }
+
+}
+
+
+.header {
+
+    height: 650px;
+    width: 100%;
+    grid-area: header;
+    background: url("mainimage.png") no-repeat center center fixed ;
+    max-width: 100%;
+
+
+}
+.contactontop{
+    height: auto;
+    width: auto;
+    text-align: right;
+    margin-right: 40px;
+    margin-top: 80px;
+
+
+
+}
+.textingontop{
+
+    height: 75%;
+    width: 75%;
+    margin-left: 12%;
+
+
+
+
+
+}
+
+
+.headingtext{
+    grid-area: headingtext;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    display: table;
+
+}
+.headertext{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+.headertext:hover{
+    color: lightskyblue;
+}
+
+.letschat{
+
+    grid-area: letschat;
+    text-align: center;
+
+}
+
+.introductiontext{
+    color: white;
+    background-color: darkslategrey;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    padding: 10px;
+    border-radius: 25px;
+    alignment: center;
+
+}
+.introductiontext:hover{
+    color: black;
+    background-color: yellowgreen;
+
+}
+.introductiontext:active{
+    box-shadow: navajowhite;
+    top: 5px;
+}
+
+.abc{
+    color: white;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    padding: 10px;
+    border-radius: 25px;
+    alignment: center;
+    word-wrap: break-word;
+
+}
+.abc:hover{
+
+    color: black;
+    background-color: yellowgreen;
+
+}
+
+
+.introduction{
+
+    height: 450px;
+   grid-area: introduction;
+    background-color: lightgoldenrodyellow;
+    border-radius: 50px 20px;
+}
+
+
+.introdiv{
+    align-content: center;
+    height: auto;
+    width: auto;
+    padding: 30px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.image{
+    height: 450px;
+    width: auto;
+    grid-area: image;
+    background: url("m.JPG") no-repeat center;
+    border-radius: 40px 80px;
+}
+.projects{
+    grid-area: projects;
+    display:grid;
+    grid: '';
+    grid-template-columns: 2fr;
+    width: auto;
+    padding: 20px;
+    background-image: url("background2.png");
+    word-wrap: break-word;
+
+}
+
+
+
+.projects div{
+
+    padding: 20px;
+    border-radius: 50px 50px;
+    margin: 10px;
+    word-wrap: break-word;
+}
+
+
+
+
+.socialmedia{
+    grid-area: socialmedia;
+    width: auto;
+    height: 300px;
+background-image: url("background2.png");
+    word-wrap: break-word;
+}
+
+.socialmediatext{
+    align-items: center;
+
+}
+.contactme{
+    grid-area: contactme;
+    width: auto;
+    height: 400px;
+    display: table;
+    margin: 10px;
+    word-wrap: break-word;
+    background-image: url("background2.png");
+
+
+}
+.form{
+    padding: 20px;
+    margin: 10px;
+    word-wrap: break-word;
+}
+
+.getintouch {
+    grid-area: getintouch;
+    height: 300px;
+    width: 75%;
+    justify-content: right;
+    word-wrap: break-word;
+}
+
+.footer{
+    grid-area: footer;
+    height: 50px;
+    width: auto;
+
+
+}

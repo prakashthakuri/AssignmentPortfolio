@@ -1,0 +1,123 @@
+*{
+    box-sizing: content-box;
+}
+
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container * {
+    border: 1px solid red;
+    position: relative;
+}
+
+.grid-container *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "Header Header Header Header" "Header Header Header Header" "Introduction Introduction Image Image" "Introduction Introduction Image Image" "Project1 Project1 project2 project2" "Project1 Project1 project2 project2" "Followme getintouch getintouch getintouch" "contactme contactme contactme contactme" "footer footer footer footer";
+}
+
+.Header { grid-area: Header;
+
+    height: 650px;
+    width: 100%;
+    background: url("mainimage.png") no-repeat center center fixed ;
+    max-width: 100%;
+}
+
+.contactontop{
+    height: auto;
+    width: auto;
+    text-align: right;
+    margin-right: 40px;
+    margin-top: 80px;
+
+
+
+}
+.textingontop{
+
+    height: 75%;
+    width: 75%;
+    margin-left: 12%;
+
+
+
+
+
+}
+
+
+.headingtext{
+    grid-area: headingtext;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    display: table;
+
+}
+.headertext{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+.headertext:hover{
+    color: lightskyblue;
+}
+
+.letschat{
+
+    grid-area: letschat;
+    text-align: center;
+
+}
+
+.introductiontext{
+    color: white;
+    background-color: darkslategrey;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    padding: 10px;
+    border-radius: 25px;
+    alignment: center;
+
+}
+.introductiontext:hover{
+    color: black;
+    background-color: yellowgreen;
+
+}
+.introductiontext:active{
+    box-shadow: navajowhite;
+    top: 5px;
+}
+
+
+.Introduction { grid-area: Introduction; }
+
+.Image { grid-area: Image; }
+
+.Project1 { grid-area: Project1; }
+
+.project2 { grid-area: project2; }
+
+.Followme { grid-area: Followme; }
+
+.getintouch { grid-area: getintouch; }
+
+.contactme { grid-area: contactme; }
+
+.footer { grid-area: footer; }
+
+
